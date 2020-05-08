@@ -1,0 +1,21 @@
+##### ansible-playbook package_loop.yml
+---
+- name: Install Multiple Packages
+  hosts: "*"
+  become: true
+  tasks:
+    - name: install packages
+      yum: name={{ item }} update_cache=yes state=latest
+      with_items:
+#       - vim
+        - tree
+#       - curl
+        - unzip
+        - git
+        - wget
+#       - python-pip
+#       - ntp
+        - htop
+#       - nginx
+      tags:
+        - packages
