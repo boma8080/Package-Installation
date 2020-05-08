@@ -1,6 +1,6 @@
 ---
 - name: Uninstall packages
-  hosts: webservers
+  hosts: "*"
   become: true
   vars:
     packages:
