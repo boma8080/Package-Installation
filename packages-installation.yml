@@ -9,6 +9,7 @@
       - tree
       - unzip
       - git
+      - lsof  
 
   tasks:
     - name: Uninstall packages
